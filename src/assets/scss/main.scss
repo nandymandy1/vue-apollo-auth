@@ -1,0 +1,38 @@
+$blue: #51B883 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+#wrapper {
+    height: 100vh !important;
+}
+
+body {
+    background-color: #E5E7E9 !important;
+}
+
+nav {
+    border-bottom: 5px solid $blue;
+}
+
+footer {
+    border-top: 7px solid $dark;
+}
+
+.card,
+.btn,
+.form-control {
+    border-radius: 2px !important;
+}
+
+.card {
+    box-shadow: 5px 5px 12px 0px rgba(0, 0, 0, 0.08);
+}

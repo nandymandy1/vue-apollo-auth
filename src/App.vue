@@ -1,32 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="wrapper" class="d-flex flex-column">
+    <Navbar />
+    <div class="container flex-grow-1 py-5">
+      <routerView />
     </div>
-    <router-view/>
+    <Footer />
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+<script>
+import Navbar from "@/components/Layouts/Navbar";
+import Footer from "@/components/Layouts/Footer";
+export default {
+  components: {
+    Navbar,
+    Footer,
+  },
+  async created() {
+    this.$store.dispatch("Auth/setUser");
+  },
+};
+</script>
